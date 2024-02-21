@@ -1,0 +1,29 @@
+# Byte-compiled / optimized Python files
+__pycache__/
+*.pyc
+
+# Environment directory
+env/
+
+# Dependency directories
+venv/
+.venv/
+
+# Logs
+*.log
+
+# Runtime files
+*.pid
+*.lock
+
+# Output of build tools
+/build/
+/dist/
+/node_modules/
+/.next/
+/.idea/
+
+# Cache files
+*.sqlite3
+*.db
+

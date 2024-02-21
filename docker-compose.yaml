@@ -1,0 +1,24 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:alpine
+    restart: always
+    environment:
+      POSTGRES_DB: db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:8000"
+    networks:
+      - dem
+  my-app:
+    build: .
+    restart: always
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+    networks:
+      - dem
+networks:
+  dem:
